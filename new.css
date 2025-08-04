@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #fff5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.quiz-container {
+  background-color: #fff0f1;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 32px rgba(255, 100, 100, 0.15);
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 0.5s ease;
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #e11d48;
+}
+
+#progress {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+#question {
+  font-size: 1.25rem;
+  margin-bottom: 1.2rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+#options {
+  list-style: none;
+  padding: 0;
+}
+
+#options li {
+  margin-bottom: 0.8rem;
+}
+
+#options label {
+  display: block;
+  background-color: #fff;
+  border: 2px solid transparent;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.25s, border-color 0.25s, transform 0.1s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+#options label:hover {
+  background-color: #ffe4e6;
+  border-color: #fda4af;
+}
+
+#options label:active {
+  background-color: #fecdd3;
+  transform: scale(0.98);
+}
+
+#options input[type="radio"] {
+  display: none;
+}
+
+#options input[type="radio"]:checked + span {
+  background-color: #fecdd3;
+  border: 2px solid #f43f5e;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  display: block;
+  color: #be123c;
+}
+
+#options label span {
+  font-size: 1rem;
+  color: #374151;
+  display: block;
+}
+
+#submit {
+  background-color: #e11d48;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.75rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s;
+}
+
+#submit:hover {
+  background-color: #be123c;
+}
+
+#submit:active {
+  background-color: #9f1239;
+  transform: scale(0.98);
+}
+
+#result {
+  margin-top: 1.75rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#result.success {
+  color: #10b981;
+}
+
+#result.fail {
+  color: #dc2626;
+}
+
+/* LAST CARD — visually different */
+.final-question {
+  background-color: #fff7ed;
+  border: 2px solid #fdba74;
+  box-shadow: 0 12px 32px rgba(234, 88, 12, 0.15);
+}
+
+.final-question h2 {
+  color: #c2410c;
+}
+
+.final-question #progress {
+  color: #fb923c;
+}
