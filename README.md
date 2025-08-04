@@ -18,3 +18,7 @@ A simple web-based quiz application built using **HTML**, **CSS**, and **JavaScr
 3. Enjoy the quiz!
 
 ## 📁 Project Structure
+quiz-app/
+├── index.html
+├── style.css
+├── script.js
